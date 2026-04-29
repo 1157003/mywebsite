@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>貓裏紅時光 | 苗栗小農紅茶與AI藝術</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Noto Serif TC', serif;
+            background-color: #F9F6F2;
+            color: #334139;
+        }
+
+        .monet-gradient {
+            background: linear-gradient(135deg, #718355 0%, #A44A3F 100%);
+            opacity: 0.8;
+        }
+
+        .glass-nav {
+            background: rgba(249, 246, 242, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-overlay {
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        /* 模擬印象派筆觸的裝飾 */
+        .brush-stroke {
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            filter: blur(20px);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="glass-nav fixed w-full z-50 px-6 py-4 flex justify-between items-center border-b border-stone-200">
+        <div class="text-2xl font-bold text-stone-800 tracking-wider">貓裏紅時光</div>
+        <div class="hidden md:flex space-x-8 text-sm font-medium">
+            <a href="#history" class="hover:text-green-700 transition">品牌故事</a>
+            <a href="#map" class="hover:text-green-700 transition">小農地圖</a>
+            <a href="#shop" class="hover:text-green-700 transition">數位茶櫃</a>
+            <a href="#ai-consult" class="bg-stone-800 text-white px-4 py-2 rounded-full hover:bg-green-800 transition">AI 諮詢</a>
+        </div>
+    </nav>
+
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover" alt="Tea Garden">
+            <div class="hero-overlay absolute inset-0"></div>
+        </div>
+        <div class="relative z-10 text-center text-white px-4">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 drop-shadow-lg">苗栗山霧間，尋回土地的蜜香</h1>
+            <p class="text-xl md:text-2xl mb-8 font-light">結合 AI 科技與職人精神的精品紅茶平台</p>
+            <a href="#shop" class="bg-white text-stone-800 px-8 py-3 rounded-full text-lg font-bold hover:bg-stone-100 transition shadow-xl">開始探索</a>
+        </div>
+    </section>
+
+    <section id="history" class="py-20 px-6 max-w-5xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4">從「貓裏」到「貓裏紅」</h2>
+            <div class="h-1 w-20 bg-red-800 mx-auto"></div>
+        </div>
+        <div class="space-y-12">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="flex-1">
+                    <h3 class="text-xl font-bold mb-2">1. 貓裏古城的記憶</h3>
+                    <p class="text-stone-600 leading-relaxed">苗栗古稱「貓裏」，在丘陵與霧氣之間，孕育了百年的茶文化。我們透過 AI 重新轉譯這份歷史，讓老茶廠的韻味在數位時代重現。</p>
+                </div>
+                <div class="flex-1 h-64 bg-stone-200 rounded-lg overflow-hidden shadow-inner">
+                    <img src="https://images.unsplash.com/photo-1543157145-f78c636d023d?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700" alt="History">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="shop" class="py-20 bg-stone-100 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex justify-between items-end mb-10">
+                <h2 class="text-3xl font-bold">精選紅茶區</h2>
+                <span class="text-stone-500 italic">由 AI 風味輪挑選</span>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+                    <div class="h-64 bg-stone-200">
+                        <img src="https://images.unsplash.com/photo-1594631252845-29fc4586c562?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover" alt="Product">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex space-x-2 mb-3">
+                            <span class="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">蜜香</span>
+                            <span class="bg-orange-100 text-orange-700 text-xs px-2 py-1 rounded">手採</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">特級貓裏紅</h3>
+                        <p class="text-stone-500 text-sm mb-4">苗栗市農會輔導，帶有熟果香氣，口感醇厚。</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold">$680</span>
+                            <button class="bg-stone-800 text-white p-2 rounded-full hover:bg-red-800 transition">
+                                <i data-lucide="shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <section id="ai-consult" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
+            <div class="md:w-1/3 monet-gradient p-10 text-white flex flex-col justify-center">
+                <i data-lucide="bot" class="w-12 h-12 mb-4"></i>
+                <h2 class="text-2xl font-bold mb-4">AI 虛擬茶待茶師</h2>
+                <p class="text-sm opacity-90">告訴我您的心情或今日配餐，我將為您媒合最適合的苗栗紅茶。</p>
+            </div>
+            <div class="md:w-2/3 p-8">
+                <div id="chat-box" class="h-64 overflow-y-auto mb-4 p-4 bg-stone-50 rounded-xl space-y-4 text-sm">
+                    <div class="bg-stone-200 p-3 rounded-lg self-start inline-block">您好！我是您的專屬茶師。請問今天想嘗試什麼風味的紅茶？</div>
+                </div>
+                <div class="flex gap-2">
+                    <input type="text" placeholder="輸入您的需求..." class="flex-1 border border-stone-200 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-600">
+                    <button class="bg-stone-800 text-white px-6 py-2 rounded-full hover:bg-stone-700 transition">發送</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-stone-900 text-white py-12 px-6 text-center">
+        <p class="text-sm opacity-50">© 2026 貓裏紅時光 - 苗栗小農與 AI 轉型計畫</p>
+    </footer>
+
+    <script>
+        // 初始化圖標
+        lucide.createIcons();
+
+        // 簡單的 AI 對話模擬
+        const chatBox = document.getElementById('chat-box');
+        document.querySelector('button').addEventListener('click', function() {
+            const input = document.querySelector('input').value;
+            if (input) {
+                const userMsg = document.createElement('div');
+                userMsg.className = 'bg-stone-800 text-white p-3 rounded-lg self-end ml-auto inline-block';
+                userMsg.innerText = input;
+                chatBox.appendChild(userMsg);
+                
+                // 模擬回覆
+                setTimeout(() => {
+                    const aiMsg = document.createElement('div');
+                    aiMsg.className = 'bg-stone-200 p-3 rounded-lg self-start inline-block';
+                    aiMsg.innerText = "收到您的需求！根據您提到的「" + input + "」，我推薦試試帶有蜜香的東方美人紅茶，這正符合苗栗小農的職人精神。";
+                    chatBox.appendChild(aiMsg);
+                    chatBox.scrollTop = chatBox.scrollHeight;
+                }, 1000);
+            }
+        });
+    </script>
+</body>
+</html>
